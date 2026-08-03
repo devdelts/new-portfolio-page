@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JC Garcia | Web Developer</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="ide-container">
+    
+    <!-- Sidebar / File Explorer -->
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <span class="sidebar-title">FILES / NAVIGATION</span>
+        <span class="sidebar-hint">(Click a file to navigate)</span>
+    </div>
+      <<ul class="file-list">
+  <li class="file-item" data-file="about"><span class="icon html-icon">&lt;&gt;</span> about.html</li>
+  <li class="file-item active" data-file="projects"><span class="icon json-icon">{}</span> projects.json</li>
+  <li class="file-item" data-file="skills"><span class="icon css-icon">#</span> skills.css</li>
+  <li class="file-item" data-file="contact"><span class="icon js-icon">JS</span> contact.js</li>
+</ul>
+    </aside>
+
+    <!-- Main Editor Window -->
+    <main class="editor-pane">
+  <!-- Tab Header Bar -->
+  <div class="tab-bar">
+    <div class="tab active" id="active-tab">
+      <span id="tab-title">{} projects.json</span>
+    </div>
+    <button id="theme-toggle" class="theme-btn" title="Toggle Theme">
+      🌙 <span>Dark</span>
+    </button>
+  </div>
+
+  <!-- Content Workspace Area -->
+  <div class="content-area">
+    
+    <!-- VIEW 1: ABOUT (Hidden by default) -->
+    <section id="view-about" class="view-content hidden">
+      <header class="dev-header">
+        <h1>JC Garcia</h1>
+        <p class="subtitle">// Web Developer Aspirant</p>
+      </header>
+      <div class="code-block">
+        <p><span class="code-keyword">const</span> <span class="code-var">developer</span> = {</p>
+        <p class="indent"><span class="code-prop">name</span>: <span class="code-string">'JC Garcia'</span>,</p>
+        <p class="indent"><span class="code-prop">role</span>: <span class="code-string">'Web Developer Aspirant'</span>,</p>
+        <p class="indent"><span class="code-prop">passion</span>: <span class="code-string">'Building responsive web apps and clean interfaces'</span>,</p>
+        <p class="indent"><span class="code-prop">status</span>: <span class="code-string">'Open to learning, collaboration, and hire'</span></p>
+        <p>};</p>
+      </div>
+    </section>
+
+    <!-- VIEW 2: PROJECTS (Active by default) -->
+    <section id="view-projects" class="view-content">
+      <header class="dev-header">
+        <h1>Featured Projects</h1>
+        <p class="subtitle">// Select entries from portfolio</p>
+      </header>
+
+      <div class="projects-grid">
+        <article class="project-card">
+          <h3>01. Personal Portfolio</h3>
+          <p>Interactive IDE-themed developer showcase built from scratch.</p>
+          <div class="tags">
+            <span>HTML</span><span>CSS</span><span>JS</span>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <h3>02. FitTrack App</h3>
+          <p>Fitness logging tool to monitor daily workouts and health goals.</p>
+          <div class="tags">
+            <span>HTML</span><span>CSS</span><span>JS</span>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <h3>03. Pet Vaccine Tracker <span class="badge">WIP</span></h3>
+          <p>Digital record-keeper for pet immunization schedules & reminders.</p>
+          <div class="tags">
+            <span>HTML</span><span>CSS</span><span>JS</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- VIEW 3: SKILLS (Hidden by default) -->
+    <section id="view-skills" class="view-content hidden">
+      <header class="dev-header">
+        <h1>Technical Skills</h1>
+        <p class="subtitle">/* Core competencies and toolbelt */</p>
+      </header>
+      <div class="skills-grid">
+        <div class="skill-category">
+          <h3>Frontend</h3>
+          <ul>
+            <li>HTML5 / Semantic Markup</li>
+            <li>CSS3 / Modern Layouts (Flexbox, Grid)</li>
+            <li>JavaScript (ES6+)</li>
+          </ul>
+        </div>
+        <div class="skill-category">
+          <h3>Tools & Workflow</h3>
+          <ul>
+            <li>Git & GitHub</li>
+            <li>VS Code</li>
+            <li>Browser DevTools</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- VIEW 4: CONTACT (Hidden by default) -->
+    <section id="view-contact" class="view-content hidden">
+      <header class="dev-header">
+        <h1>Get In Touch</h1>
+        <p class="subtitle">// Let's build something together</p>
+      </header>
+      <div class="contact-card">
+        <p>Feel free to reach out for opportunities or collaboration!</p>
+        <div class="contact-links">
+          <a href="mailto:your-email@example.com" class="contact-btn">✉️ Send Email</a>
+          <a href="https://github.com" target="_blank" class="contact-btn">🐙 GitHub</a>
+          <a href="https://linkedin.com" target="_blank" class="contact-btn">💼 LinkedIn</a>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- Interactive Terminal Bar -->
+<footer class="terminal-bar">
+  <div class="terminal-header">
+    <span class="terminal-title">TERMINAL</span>
+    <span class="terminal-hint">Try typing <code>help</code>, <code>clear</code>, or a file name like <code>about</code></span>
+  </div>
+  
+  <!-- Output Log Container -->
+  <div class="terminal-output" id="terminal-output">
+    <div class="terminal-line">Type <span class="code-keyword">'help'</span> for a list of available commands.</div>
+  </div>
+
+  <!-- Command Input Prompt -->
+  <div class="terminal-input-row">
+    <span class="prompt-symbol">visitor@jc-portfolio:~$</span>
+    <input type="text" id="terminal-input" placeholder="Type a command..." autocomplete="off" spellcheck="false" />
+  </div>
+</footer>
+</main>
+
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
