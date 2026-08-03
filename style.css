@@ -540,3 +540,67 @@ body {
   font-size: 0.85rem;
   width: 100%;
 }
+
+/* ==========================================
+   PROJECT CARD STYLES
+   ========================================== */
+   /* Project Card Enhancements */
+.project-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.status-badge {
+  font-size: 0.7rem;
+  background-color: rgba(78, 201, 176, 0.15);
+  color: var(--accent-green);
+  border: 1px solid var(--accent-green);
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-family: var(--font-code);
+}
+
+.project-desc {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin-bottom: 12px;
+  line-height: 1.4;
+}
+
+.project-features {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 16px 0;
+  font-size: 0.85rem;
+  color: var(--text-main);
+}
+
+.project-features li {
+  padding: 2px 0;
+}
+
+.project-links {
+  display: flex;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.project-btn {
+  font-size: 0.8rem;
+  font-family: var(--font-code);
+  text-decoration: none;
+  color: var(--text-main);
+  background-color: var(--sidebar-bg);
+  border: 1px solid var(--border-color);
+  padding: 6px 12px;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+
+.project-btn:hover {
+  border-color: var(--accent-color);
+  color: var(--accent-color);
+  transform: translateY(-1px);
+}
