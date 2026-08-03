@@ -14,166 +14,209 @@
       <div class="sidebar-header">
         <span class="sidebar-title">FILES / NAVIGATION</span>
         <span class="sidebar-hint">(Click a file to navigate)</span>
-    </div>
-      <<ul class="file-list">
-  <li class="file-item" data-file="about"><span class="icon html-icon">&lt;&gt;</span> about.html</li>
-  <li class="file-item active" data-file="projects"><span class="icon json-icon">{}</span> projects.json</li>
-  <li class="file-item" data-file="skills"><span class="icon css-icon">#</span> skills.css</li>
-  <li class="file-item" data-file="contact"><span class="icon js-icon">JS</span> contact.js</li>
-</ul>
+      </div>
+      <ul class="file-list">
+        <li class="file-item" data-file="about"><span class="icon html-icon">&lt;&gt;</span> about.html</li>
+        <li class="file-item active" data-file="projects"><span class="icon json-icon">{}</span> projects.json</li>
+        <li class="file-item" data-file="skills"><span class="icon css-icon">#</span> skills.css</li>
+        <li class="file-item" data-file="contact"><span class="icon js-icon">JS</span> contact.js</li>
+      </ul>
     </aside>
 
     <!-- Main Editor Window -->
     <main class="editor-pane">
-  <!-- Tab Header Bar -->
-  <div class="tab-bar">
-    <div class="tab active" id="active-tab">
-      <span id="tab-title">{} projects.json</span>
-    </div>
-    <button id="theme-toggle" class="theme-btn" title="Toggle Theme">
-      🌙 <span>Dark</span>
-    </button>
-  </div>
-
-  <!-- Content Workspace Area -->
-  <div class="content-area">
-    
-    <!-- VIEW 1: ABOUT (Hidden by default) -->
-    <section id="view-about" class="view-content hidden">
-      <header class="dev-header">
-        <h1>JC Garcia</h1>
-        <p class="subtitle">// Web Developer</p>
-      </header>
-      <div class="code-block">
-        <p><span class="code-keyword">const</span> <span class="code-var">developer</span> = {</p>
-        <p class="indent"><span class="code-prop">name</span>: <span class="code-string">'JC Garcia'</span>,</p>
-        <p class="indent"><span class="code-prop">role</span>: <span class="code-string">'Web Developer Aspirant'</span>,</p>
-        <p class="indent"><span class="code-prop">passion</span>: <span class="code-string">'Building responsive web apps and clean interfaces'</span>,</p>
-        <p class="indent"><span class="code-prop">status</span>: <span class="code-string">'Open to learning, collaboration, and hire'</span></p>
-        <p>};</p>
-      </div>
-    </section>
-
-    <!-- VIEW 2: PROJECTS (Active by default) -->
-    <section id="view-projects" class="view-content">
-      <header class="dev-header">
-        <h1>Featured Projects</h1>
-        <p class="subtitle">// Select entries from portfolio</p>
-      </header>
-
-      <div class="projects-grid">
-        <article class="project-card">
-          <h3>01. Personal Portfolio</h3>
-          <p>Interactive IDE-themed developer showcase built from scratch.</p>
-          <div class="tags">
-            <span>HTML</span><span>CSS</span><span>JS</span>
-          </div>
-        </article>
-
-        <article class="project-card">
-          <div class="project-header">
-            <h3>02. FitTrack App</h3>
-            <span class="badge status-badge">Active Project</span>
-          </div>
-        
-          <p class="project-desc">
-            A fitness tracking app designed to help users log daily workouts, track health goals, and monitor overall progress
-            with an easy-to-use interface.
-          </p>
-        
-          <ul class="project-features">
-            <li>⚡ Log daily workouts & routine history</li>
-            <li>📊 Track health metrics and progress goals</li>
-            <li>📱 Responsive, mobile-friendly design</li>
-          </ul>
-        
-          <div class="tags">
-            <span>HTML</span><span>CSS</span><span>JS</span>
-          </div>
-        
-          <div class="project-links">
-            <a href="https://github.com/devdelts/fittrackv1" target="_blank" class="project-btn">
-              🐙 GitHub Repo
-            </a>
-            <a href="#" class="project-btn demo-btn" onclick="alert('Live demo coming soon!'); return false;">
-              🚀 Live Demo
-            </a>
-          </div>
-        </article>
-
-        <article class="project-card">
-          <h3>03. Pet Vaccine Tracker <span class="badge">WIP</span></h3>
-          <p>Digital record-keeper for pet immunization schedules & reminders.</p>
-          <div class="tags">
-            <span>HTML</span><span>CSS</span><span>JS</span>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <!-- VIEW 3: SKILLS (Hidden by default) -->
-    <section id="view-skills" class="view-content hidden">
-      <header class="dev-header">
-        <h1>Technical Skills</h1>
-        <p class="subtitle">/* Core competencies and toolbelt */</p>
-      </header>
-      <div class="skills-grid">
-        <div class="skill-category">
-          <h3>Frontend</h3>
-          <ul>
-            <li>HTML5 / Semantic Markup</li>
-            <li>CSS3 / Modern Layouts (Flexbox, Grid)</li>
-            <li>JavaScript (ES6+)</li>
-          </ul>
+      
+      <!-- Tab Header Bar -->
+      <div class="tab-bar">
+        <div class="tab active" id="active-tab">
+          <span id="tab-title">{} projects.json</span>
         </div>
-        <div class="skill-category">
-          <h3>Tools & Workflow</h3>
-          <ul>
-            <li>Git & GitHub</li>
-            <li>VS Code</li>
-            <li>Browser DevTools</li>
-          </ul>
-        </div>
+        <button id="theme-toggle" class="theme-btn" title="Toggle Theme">
+          🌙 <span>Dark</span>
+        </button>
       </div>
-    </section>
 
-    <!-- VIEW 4: CONTACT (Hidden by default) -->
-    <section id="view-contact" class="view-content hidden">
-      <header class="dev-header">
-        <h1>Get In Touch</h1>
-        <p class="subtitle">// Let's build something together</p>
-      </header>
-      <div class="contact-card">
-        <p>Feel free to reach out for opportunities or collaboration!</p>
-        <div class="contact-links">
-          <a href="mailto:delts.dev.business@gmail.com" class="contact-btn">✉️ Send Email</a>
-          <a href="https://github.com/devdelts" target="_blank" class="contact-btn">🐙 GitHub</a>
-          <a href="https://linkedin.com" target="_blank" class="contact-btn">💼 LinkedIn</a>
-        </div>
+      <!-- Content Workspace Area -->
+      <div class="content-area">
+        
+        <!-- VIEW 1: ABOUT (Hidden by default) -->
+        <section id="view-about" class="view-content hidden">
+          <header class="dev-header">
+            <h1>JC Garcia</h1>
+            <p class="subtitle">// Web Developer</p>
+          </header>
+          <div class="code-block">
+            <p><span class="code-keyword">const</span> <span class="code-var">developer</span> = {</p>
+            <p class="indent"><span class="code-prop">name</span>: <span class="code-string">'JC Garcia'</span>,</p>
+            <p class="indent"><span class="code-prop">role</span>: <span class="code-string">'Web Developer Aspirant'</span>,</p>
+            <p class="indent"><span class="code-prop">passion</span>: <span class="code-string">'Building responsive web apps and clean interfaces'</span>,</p>
+            <p class="indent"><span class="code-prop">status</span>: <span class="code-string">'Open to learning, collaboration, and hire'</span></p>
+            <p>};</p>
+          </div>
+        </section>
+
+        <!-- VIEW 2: PROJECTS (Active by default) -->
+        <section id="view-projects" class="view-content">
+          <header class="dev-header">
+            <h1>Featured Projects</h1>
+            <p class="subtitle">// Select entries from portfolio</p>
+          </header>
+
+          <div class="projects-grid">
+            
+            <!-- Card 1: Personal Portfolio -->
+            <article class="project-card">
+              <div class="project-card-top">
+                <div class="project-header">
+                  <h3>01. Personal Portfolio</h3>
+                  <span class="badge status-badge">Active</span>
+                </div>
+                <p class="project-desc">
+                  Interactive IDE-themed developer showcase built from scratch with dynamic tabs and terminal support.
+                </p>
+                <ul class="project-features">
+                  <li>VS Code workspace interface</li>
+                  <li>Interactive navigation terminal</li>
+                  <li>Dark and light theme toggles</li>
+                </ul>
+              </div>
+              <div class="project-card-bottom">
+                <div class="tags">
+                  <span>HTML</span><span>CSS</span><span>JS</span>
+                </div>
+                <div class="project-links">
+                  <a href="https://github.com/devdelts/new-portfolio-page" target="_blank" class="project-btn">
+                    🐙 GitHub Repo
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <!-- Card 2: FitTrack App -->
+            <article class="project-card">
+              <div class="project-card-top">
+                <div class="project-header">
+                  <h3>02. FitTrack App</h3>
+                  <span class="badge status-badge">Active</span>
+                </div>
+                <p class="project-desc">
+                  A fitness tracking application designed to help users log daily workouts and monitor health goals.
+                </p>
+                <ul class="project-features">
+                  <li>Log daily workouts & routine history</li>
+                  <li>Track health metrics & progress goals</li>
+                  <li>Responsive, mobile-friendly design</li>
+                </ul>
+              </div>
+              <div class="project-card-bottom">
+                <div class="tags">
+                  <span>HTML</span><span>CSS</span><span>JS</span>
+                </div>
+                <div class="project-links">
+                  <a href="https://github.com/devdelts/fittrackv1" target="_blank" class="project-btn">
+                    🐙 GitHub Repo
+                  </a>
+                  <a href="#" class="project-btn demo-btn" onclick="alert('Live demo coming soon!'); return false;">
+                    🚀 Live Demo
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <!-- Card 3: Pet Vaccine Tracker -->
+            <article class="project-card">
+              <div class="project-card-top">
+                <div class="project-header">
+                  <h3>03. Pet Vaccine Tracker</h3>
+                  <span class="badge wip">WIP</span>
+                </div>
+                <p class="project-desc">
+                  Digital record-keeper for pet immunization schedules, medical logs, and recurring vaccine reminders.
+                </p>
+                <ul class="project-features">
+                  <li>Pet medical record tracking</li>
+                  <li>Vaccination schedule notifications</li>
+                  <li>Multi-pet profile management</li>
+                </ul>
+              </div>
+              <div class="project-card-bottom">
+                <div class="tags">
+                  <span>HTML</span><span>CSS</span><span>JS</span>
+                </div>
+                <div class="project-links">
+                  <a href="#" class="project-btn" onclick="alert('In development!'); return false;">
+                    🐙 GitHub Repo
+                  </a>
+                </div>
+              </div>
+            </article>
+
+          </div>
+        </section>
+
+        <!-- VIEW 3: SKILLS (Hidden by default) -->
+        <section id="view-skills" class="view-content hidden">
+          <header class="dev-header">
+            <h1>Technical Skills</h1>
+            <p class="subtitle">/* Core competencies and toolbelt */</p>
+          </header>
+          <div class="skills-grid">
+            <div class="skill-category">
+              <h3>Frontend</h3>
+              <ul>
+                <li>HTML5 / Semantic Markup</li>
+                <li>CSS3 / Modern Layouts (Flexbox, Grid)</li>
+                <li>JavaScript (ES6+)</li>
+              </ul>
+            </div>
+            <div class="skill-category">
+              <h3>Tools & Workflow</h3>
+              <ul>
+                <li>Git & GitHub</li>
+                <li>VS Code</li>
+                <li>Browser DevTools</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <!-- VIEW 4: CONTACT (Hidden by default) -->
+        <section id="view-contact" class="view-content hidden">
+          <header class="dev-header">
+            <h1>Get In Touch</h1>
+            <p class="subtitle">// Let's build something together</p>
+          </header>
+          <div class="contact-card">
+            <p>Feel free to reach out for opportunities or collaboration!</p>
+            <div class="contact-links">
+              <a href="mailto:delts.dev.business@gmail.com" class="contact-btn">✉️ Send Email</a>
+              <a href="https://github.com/devdelts" target="_blank" class="contact-btn">🐙 GitHub</a>
+              <a href="https://linkedin.com" target="_blank" class="contact-btn">💼 LinkedIn</a>
+            </div>
+          </div>
+        </section>
+
       </div>
-    </section>
 
-  </div>
+      <!-- Interactive Terminal Bar -->
+      <footer class="terminal-bar">
+        <div class="terminal-header">
+          <span class="terminal-title">TERMINAL</span>
+          <span class="terminal-hint">Try typing <code>help</code>, <code>clear</code>, or a file name like <code>about</code></span>
+        </div>
+        
+        <!-- Output Log Container -->
+        <div class="terminal-output" id="terminal-output">
+          <div class="terminal-line">Type <span class="code-keyword">'help'</span> for a list of available commands.</div>
+        </div>
 
-  <!-- Interactive Terminal Bar -->
-<footer class="terminal-bar">
-  <div class="terminal-header">
-    <span class="terminal-title">TERMINAL</span>
-    <span class="terminal-hint">Try typing <code>help</code>, <code>clear</code>, or a file name like <code>about</code></span>
-  </div>
-  
-  <!-- Output Log Container -->
-  <div class="terminal-output" id="terminal-output">
-    <div class="terminal-line">Type <span class="code-keyword">'help'</span> for a list of available commands.</div>
-  </div>
-
-  <!-- Command Input Prompt -->
-  <div class="terminal-input-row">
-    <span class="prompt-symbol">visitor@jc-portfolio:~$</span>
-    <input type="text" id="terminal-input" placeholder="Type a command..." autocomplete="off" spellcheck="false" />
-  </div>
-</footer>
-</main>
+        <!-- Command Input Prompt -->
+        <div class="terminal-input-row">
+          <span class="prompt-symbol">visitor@jc-portfolio:~$</span>
+          <input type="text" id="terminal-input" placeholder="Type a command..." autocomplete="off" spellcheck="false" />
+        </div>
+      </footer>
+    </main>
 
   </div>
   <script src="script.js"></script>
