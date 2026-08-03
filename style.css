@@ -103,8 +103,9 @@ body {
 }
 
 .file-item.active {
-  background-color: rgba(255, 255, 255, 0.1);
-  color: #ffffff;
+  background-color: rgba(0, 0, 0, 0.08); /* Soft active highlight */
+  color: var(--text-main); /* Dynamically switches between light and dark text */
+  font-weight: 600;
 }
 
 .icon {
@@ -344,6 +345,16 @@ body {
 
 [data-theme="light"] .theme-btn:hover {
   background-color: #e0e0e0;
+}
+
+[data-theme="light"] .file-item.active {
+  background-color: #e2e2e2; /* Clear highlight for active item in light mode */
+  color: #000000;            /* Crisp dark text */
+}
+
+[data-theme="light"] .file-item:hover {
+  background-color: #eaeaea;
+  color: #000000;
 }
 
 /* ==========================================
